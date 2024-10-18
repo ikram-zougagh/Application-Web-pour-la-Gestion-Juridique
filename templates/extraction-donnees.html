@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>إستخراج البيانات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='extraction.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='ministere.svg') }}" alt="Logo">
+        </div>
+    </header>
+    <div class="title">
+        <h2>استخراج البيانات</h2>
+    </div>
+    <div class="recherche">
+    <form  method="post">
+        <p>تحديد أرقام الملفات</p>
+        <hr>
+            <div class="inline">
+                <input type="number" name="end_id" id="end_id" required>
+                 <label for="end_id">: الى</label>
+            </div>
+            <div class="inline">
+                <input type="number" name="start_id" id="start_id" required>
+                <label for="start_id">: من</label>
+            </div>
+     </div>
+     <div class="extract">
+        <button type="submit">إستخراج</button>
+     </div>
+     </form>
+<div>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='accueil.png') }}" width="40px" height="40px" alt="Logo"></a>
+</div>
+</body>
+</html>

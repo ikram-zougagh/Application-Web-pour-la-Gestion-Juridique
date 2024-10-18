@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='acceuil-style.css') }}">
+    <title>الصفحة الرئيسية </title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='ministere.svg') }}" alt="Logo">
+        </div>
+    </header>
+    <div class="title">
+        <h2>الخدمات</h2>
+    </div>
+    <div class="content_page_all_service">
+        <div class="item">
+            <div class="LL">
+                <img src="static//suivi.png" width="50px" height="50px">
+            </div>
+            <div class="group_title">
+                <h3><a href="suivie.html">تتبع ملفات القضايا</a></h3>
+            </div>
+        </div>
+        <div class="item">
+            <div class="LL">
+                <img src="static//ajouter-le-fichier.png" width="60px" height="60px">
+            </div>
+            <div class="group_title">
+                <h3><a href="ajout-dossier.html">إضافة ملف </a></h3>
+            </div>
+        </div>
+                <div class="item">
+            <div class="LL">
+                <img src="static//tableau-de-bord.png" width="60px" height="60px">
+            </div>
+            <div class="group_title">
+                <h3><a href="extraction-donnees.html">إستخراج البيانات</a></h3>
+            </div>
+        </div>
+        <div class="item">
+            <div class="group_image">
+                <img src="static//service.png" alt="image" width="60px" height="60px">
+            </div>
+            <div class="group_title">
+                <h3><a href="autre.html">خدمات أخرى</a></h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

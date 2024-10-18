@@ -1,0 +1,145 @@
+        header {
+            background-color: #91d1d8;
+            padding: 40px;
+            border: 2px solid rgb(7, 105, 105);
+        }
+        body, header {
+            margin: 0;
+        }
+        body{
+            background: linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%),
+                linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%);
+            background-size: 20px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: 40px;
+            justify-content: right;
+        }
+        .title h2 {
+            font-size: xx-large;
+            display: block;
+            padding-bottom: 15px;
+            text-align: center;
+            color: rgb(7, 105, 105);
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .title h2:after {
+           content: '';
+           position: absolute;
+           bottom: -5px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 25%;
+           height: 5px;
+           background: #ffc300;
+        }
+        .recherche{
+            width: 1300px;
+            height: 300px;
+            border: 1px solid rgb(7, 105, 105);
+            border-radius: 5px;
+            background:linear-gradient(45deg, #e6fbfb, #ffffff);
+            display: block;
+            margin: 0 auto; /* This will center the div horizontally */
+            margin-top: 90px;
+            box-shadow: 0 2px 4px rgb(7, 105, 105,0.7);
+
+        }
+        p{
+            font-size: 25px;
+            color:rgb(7, 105, 105);
+            text-align: right;
+            margin-right: 140px;
+            margin-top: 20px;
+        }
+        hr{
+            border-radius: 5px 5px 5px 5px;
+            color:rgb(7, 105, 105);
+            width:30%;
+            box-shadow: 0 2px 4px rgba(28, 87, 87, 0.3);
+            text-align: right;
+            margin-right: 90px;
+
+        }
+        .search-form{
+            display: flex;
+            max-width: 700px;
+            margin: 80px auto;
+            background-color: linear-gradient(45deg, #e6fbfb, #ffffff);
+            border-radius: 10px;
+            padding: 10px;
+            height:60px;
+}
+        input[type="text"] {
+           flex: 1;
+            border: 1px solid rgb(7, 105, 105);
+           padding: 10px;
+           font-size: 25px;
+           border-radius:0 10px 10px 0;
+}
+button {
+    border: none;
+    background-color: #2b7f8a;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffc300;
+}
+.results{
+            width: 1300px;
+            height: 300px;
+            border: 1px solid rgb(7, 105, 105);
+            border-radius: 5px;
+            background:linear-gradient(45deg, #e6fbfb, #ffffff);
+            display: block;
+            margin: 0 auto; /* This will center the div horizontally */
+            margin-top: 90px;
+            box-shadow: 0 2px 4px rgb(7, 105, 105,0.7);
+            }
+.table_resultat {
+  border: 1px solid rgb(7, 105, 105);
+  width: 80%;
+  border-collapse: collapse; /* To remove default spacing between cells */
+  height:130px;
+  margin:0 auto;
+  margin-top:50px;
+}
+.table_resultat th,
+.table_resultat td {
+  border: 1px solid rgb(7, 105, 105);
+  padding: 10px;
+  text-align: center;
+}
+.table_resultat th {
+  background-color: #91d1d8; /* Set the header background color */
+  color:rgb(7, 105, 105);
+}
+.table_resultat tbody tr:nth-child(odd) {
+  background-color: #e6fbfb;
+}
+.titres{
+            font-size: 25px;
+            color:rgb(7, 105, 105);
+            text-align: right;
+            margin-right: 140px;
+            margin-top: 20px;}
+.empty{
+ width: 1300px;
+ height: 90px;
+ background-color:#F5F5DC;
+ border: 1px solid rgb(7, 105, 105);
+ border-radius: 5px;
+ margin:0 auto;
+ margin-top:80px;
+
+}

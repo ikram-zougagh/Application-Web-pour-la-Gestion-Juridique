@@ -1,0 +1,94 @@
+header {
+            background-color: #91d1d8;
+            padding: 40px;
+            border: 2px solid rgb(7, 105, 105);
+}
+body, header {
+            margin: 0;
+}
+body{
+            background: linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%),
+            linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%);
+            background-size: 20px 20px;
+            direction: rtl;
+}
+  .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 90px; /* Ajustez la taille de votre logo */
+    height: 90px;
+    margin-right: 10px; /* Espace entre le logo et le texte (si applicable) */
+  }
+.title h2 {
+    font-size: xx-large;
+    display: block;
+    padding-bottom: 15px;
+    text-align: center;
+    color: rgb(7, 105, 105);
+    margin-top: 35px;
+    position: relative;
+}
+
+.title h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 5px;
+    background: #ffc300;
+}
+form {
+            max-width: 400px;
+            margin: 0 auto;
+}
+label {
+            margin-top: 1px;
+            display: block;
+            margin-bottom: 5px;
+            text-align: right;
+}
+input, select, textarea {
+            width: 100%;
+            padding: 4px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+}
+textarea {
+            resize: vertical;
+            height: 50px;
+}
+input[type="submit"] {
+            background-color: rgb(7, 105, 105);
+            color: white;
+            cursor: pointer;
+}
+
+.formulaire{
+            border: 1px solid rgb(7, 105, 105);
+            width: 800px;
+            height: 850px;
+            border-radius: 30px 30px 30px 30px;
+            background:linear-gradient(45deg, #e6fbfb, #ffffff);
+            margin: 0 auto;
+}
+.button:hover {
+        background-color: #ffc300;
+}
+.form-title{
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 6px;
+        color: rgb(7, 105, 105);
+        text-shadow: 3px 3px 3px rgb(7, 105, 105);
+        border-bottom: solid 2px rgb(7, 105, 105);
+}

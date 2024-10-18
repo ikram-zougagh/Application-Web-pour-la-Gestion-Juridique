@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ajout.css') }}">
+    <title>إضافة ملف</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='ministere.svg') }}" alt="Logo" width="60px" height="60px">
+        </div>
+    </header>
+    <div class="title">
+        <h2>إضافة الملفات</h2>
+    </div>
+<div class="formulaire">
+    <h1 class="form-title">معلومات حول الملف</h1>
+    <form  method="post" >
+        <div class="main-user-info">
+        <label for="numero">رقم الملف:</label>
+        <input type="text" id="numero" name="numero" required>
+
+        <label for="type">نوع القضية:</label>
+        <input list="types" id="type" name="type"required>
+        <datalist id="types" >
+            <option value="[2808]جني سير استئنافي">
+            <option value="[2801]جنحي عادي استئنافي">
+            <option value="[2101]جنحي تأديبي استئنافي">
+            <!-- Ajoutez ici d'autres options si nécessaire -->
+        </datalist>
+
+        <label for="annee">السنة:</label>
+        <input type="number" id="annee" name="annee" required>
+        <label for="date_etat" >التصفية:</label>
+        <input type="date" id="date_liquidation" name="date_liquidation"  >
+            <label for="date_etat">التبليغ:</label>
+        <input type="date" id="date_notification" name="date_notification"  >
+            <label for="date_etat">التنفيذ:</label>
+        <input type="date" id="date_mise_en_oeuvre" name="date_mise_en_oeuvre"  >
+            <label for="date_etat">الحفظ:</label>
+        <input type="date" id="date_preservation" name="date_preservation"  >
+            <label for="date_etat">العقوبات الحبسية:</label>
+        <input type="date" id="date_action_pour_delit" name="date_action_pour_delit">
+            <label for="date_etat">الجنحي:</label>
+        <input type="date" id="date_etat" name="date_deliquant">
+
+        <label for="remarques">ملاحظة:</label>
+        <textarea id="remarques" name="remarques"></textarea>
+        <input class="button" type="submit" value="إضافة الملف">
+        </div>
+    </form>
+</div>
+<div>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='accueil.png') }}" width="40px" height="40px" alt="Logo"></a>
+</div>
+</body>
+</html>
+

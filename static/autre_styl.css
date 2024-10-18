@@ -1,0 +1,127 @@
+header {
+    background-color: #91d1d8;
+    padding: 20px;
+    border: 1px solid rgb(7, 105, 105);
+}
+body, header {
+    margin: 0;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 30px;
+    justify-content: right;
+}
+.button1 {
+
+    padding: 20px 50px;
+    background-color: #91d1d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 40px;
+
+}
+.button1:hover {
+    background-color: #ffc300;
+}
+
+.table_resultat {
+  border: 1px solid rgb(7, 105, 105);
+  width: 80%;
+  border-collapse: collapse; /* To remove default spacing between cells */
+  height:130px;
+  margin:0 auto;
+  margin-top:50px;
+  margin-bottom: 10px;
+}
+.table_resultat th,
+.table_resultat td {
+  border: 1px solid rgb(7, 105, 105);
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.table_resultat th {
+  background-color: #91d1d8; /* Set the header background color */
+  color:rgb(7, 105, 105);
+}
+.table_resultat tbody tr:nth-child(odd) {
+  background-color: #e6fbfb;
+}
+
+.results{
+            width: 1000px;
+            height: 250px;
+            border: 1px solid rgb(7, 105, 105);
+            border-radius: 5px;
+            background:linear-gradient(45deg, #e6fbfb, #ffffff);
+            display: block;
+            margin: 0 auto; /* This will center the div horizontally */
+            margin-top: 80px;
+            box-shadow: 0 2px 4px rgb(7, 105, 105,0.7);
+            }
+.style_ecrit{
+text_align: center;
+color: rgb(7, 105, 105);
+margin-left: 400px;
+}
+.centralisation{
+text_align: center
+margin-left: 150px
+margin-top: 20px;
+}
+
+.button2 {
+    padding: 20px 50px;
+    background-color: #91d1d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+     /*margin-right: 10px; Pour espacement entre les boutons */
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 90px;
+
+}
+
+.button2:hover {
+    background-color: #ffc300;
+}
+.button3 {
+    padding: 15px 40px;
+    background-color: #91d1d8;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    margin-top: 80px;
+}
+.text_zone {
+margin-top: 80px;
+width: 200px;
+height: 30px;
+}
+.resultat_sup {
+            width: 1000px;
+            height: 200px;
+            border: 1px solid rgb(7, 105, 105);
+            border-radius: 5px;
+            background: linear-gradient(45deg, #e6fbfb, #ffffff);
+            margin: 0 auto;
+            margin-top: 90px;
+            box-shadow: 0 2px 4px rgba(7, 105, 105, 0.7);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(7, 105, 105);
+            margin-bottom: 10px;
+}
+.search-form{
+justify-content: space-between;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+  <link rel="stylesheet" href="static//log-in-style.css">
+  <title>تسجيل الدخول </title>
+  <style>
+      header {
+    background-color: #82cfd8;
+    padding: 30px;
+    border: 1px solid rgb(7, 105, 105);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 90px; /* Ajustez la taille de votre logo */
+    height: 90px;
+    margin-right: 10px; /* Espace entre le logo et le texte (si applicable) */
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="static\\ministere.svg" alt="Logo">
+    </div>
+    <!-- Autre contenu de la barre supérieure -->
+  </header>
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        {% if error_message %}
+        <p style="color: red; font-size: large;">{{ error_message }}</p>
+        {% endif %}
+        <form action="{{url_for('log')}}" method="post">
+          <h2>تسجيل الدخول</h2>
+          <div class="inputbox">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="text" name="username" required>
+            <label>اسم المستخدم</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" name="password" required>
+            <label >الرقم السري</label>
+          </div>
+         <button >تسجيل الدخول</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

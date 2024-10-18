@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>خدمات أخرى</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='autre_styl.css') }}">
+    <style>
+        body {
+    background: linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%),
+      linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%);
+    background-size: 50px 50px; /* Try adjusting this value */
+}
+.title h2 {
+    font-size: xx-large;
+    display: block;
+    padding-bottom: 15px;
+    text-align: center;
+    color: rgb(7, 105, 105);
+    margin-top: 35px;
+    position: relative;
+}
+
+.title h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 5px;
+    background: #ffc300;
+}
+.button1 {
+
+    padding: 20px 50px;
+    background-color: #91d1d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 40px;
+
+}
+.button1:hover {
+    background-color: #ffc300;
+}
+    </style>
+</head>
+<body>
+<header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='ministere.svg') }}" alt="Logo">
+        </div>
+</header>
+<br>
+<br>
+    <div class="title">
+        <h2>إضافة الملفات</h2>
+    </div>
+<br>
+<br>
+
+<form  class="search-form" method="post">
+    <div>
+        <!-- Le formulaire pour afficher les résultats -->
+       <form action="{{ url_for('autre_nombre') }}" method="post">
+          <button type="submit" class="button1"><i>عدد الملفات</i></button>
+        </form>
+        <!-- Bouton pour afficher le formulaire de suppression -->
+        <button type="button" class="button2" onclick="afficherFormulaire()">حذف ملف</button></div>
+
+    <!-- Le formulaire pour supprimer un dossier -->
+    <div class="resultat_sup" id="supp_form" style="display: none;">
+        <form action="{{ url_for('autre_supp') }}" method="post">
+            <br>
+            <input type="text" name="numero_dossier" class="text_zone" placeholder="الرقم/الرمز/السنة" required>
+            <button type="submit" class="button3" >تأكيد الحذف </button>
+        </form>
+    </div>
+</form>
+
+{% if message %}
+    <p class="resultat_sup">{{ message }}</p>
+{% endif %}
+
+<script>
+        function afficherFormulaire() {
+            var formulaire = document.getElementById("supp_form");
+            if (formulaire.style.display === "none") {
+                formulaire.style.display = "block";
+            } else {
+                formulaire.style.display = "none";
+            }
+            var resultats = document.querySelector(".results");
+            if (resultats) {
+                resultats.style.display = "none";
+            }
+        }
+</script>
+
+{% if results %}
+    <div id="results" class="results">
+        <h2 class="style_ecrit">:احصائيات الملفات </h2>
+        <table class="table_resultat">
+           <thead>
+                <tr>
+                    <th>العدد الاجمالي</th>
+                    <th> في التبليغ</th>
+                    <th>في التصفية</th>
+                    <th>في التنفيذ</th>
+                    <th>في الحفظ</th>
+                    <th>في العقوبات الحبسية</th>
+                    <th>في الجنحي</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>{{ result[3] }}</td>
+                     <td>{{ result[4] }}</td>
+                     <td>{{ result[5] }}</td>
+                     <td>{{ result[ 6] }}</td>
+                     <td>{{ result[7] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}
+<div>
+    <div>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='accueil.png') }}" width="40px" height="40px" alt="Logo"></a>
+</div>
+</body>
+</html>
